@@ -1,15 +1,26 @@
 # Tax Transcript Request System
 
-A simple Python project for uploading tax transcript request PDF files.
+## Project Overview
+A Python project for uploading tax transcript request PDF files and to extract the data from the tax transcript PDF file using OpenAI's GPT. The extracted JSON file will be used by this system to request the tax transcripts on behalf of client for applying for a loan. 
 
-## Features
-- Upload tax transcript request PDF files
+## Use Case & Workflow
+Current scenario the banker manually enters the data from clients tax transcript PDF file in to the Tax transcript request system. Using OpenAI this will replace the manual entry and automate the extraction process. Tax transcript request system will use this JSON file to order Tax transcripts from IRS.
+
+## AI Features to be Implemented
+- Prompt engineering to upload tax transcript request PDF files
 - Automatic file naming with timestamps to prevent overwrites
 - List all previously uploaded files
 - View uploaded PDF files using system default viewer
-- **Extract PDF data to JSON** — captures both text and user-entered form field values
+- Captures user-entered form field values use Retrieval-Augmented Generation (RAG) and vector databases
+- Structured outputs - Extract PDF data to JSON
+- Evaluation frameworks
+- Observability tools
 - List all extracted JSON files
-- Simple CLI interface
+
+## Prerequisites
+- Python 3.11 or higher
+- OpenAI Account and API Key (GPT-4 Access required)
+- Code Editor ( IDE ) VScode or other editor
 
 ## Project Structure
 ```
@@ -25,9 +36,9 @@ TaxTranscript/
    ```
    python tax_transcript.py
    ```
-3. Follow the CLI prompts:
+3. Follow the Prompts.
 
-## Menu Options
+## Expample Prompts
 | Option | Description |
 |--------|-------------|
 | 1 | Upload a tax transcript request PDF |
@@ -54,9 +65,9 @@ Enter the path to the PDF file: C:\Users\John\Documents\tax_request.pdf
 ✓ File uploaded successfully!
 ```
 
-## JSON Output Format
+## Expected Outputs - JSON Output Format
 When you extract a PDF to JSON, the output includes:
-- **form_data**: Key-value pairs of user-entered form fields (if any)
+- **form_data**: Key-value pairs of user-entered form fields
 
 ```json
 {
@@ -82,12 +93,16 @@ When you extract a PDF to JSON, the output includes:
   "consent": true
 }
 ```
-  Filename: tax_transcript_20260430_143022_tax_request.pdf
-  Size: 12345 bytes
-  Uploaded at: 2026-04-30T14:30:22.123456
-```
+
+## Evaluation Strategy
+- Briefly describe how you would assess your system’s effectiveness.
+-  Include any metrics or evaluation methods you would use.
+
+## Observability Plan
+-  Note how you would track performance, errors, or usage patterns over time.
 
 ## Notes
 - Only PDF files are accepted
 - Uploaded files are stored in the `uploads` subdirectory
 - Filenames include timestamps to ensure uniqueness
+- The JSON will be used by downstream system to request Tax Transcript
