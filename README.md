@@ -20,7 +20,7 @@ TaxTranscript/
 ```
 
 ## How to Run
-1. Navigate to the `week_7/TaxTranscript` directory.
+1. Navigate to the `TaxTranscript` directory.
 2. Run the application:
    ```
    python tax_transcript.py
@@ -56,21 +56,30 @@ Enter the path to the PDF file: C:\Users\John\Documents\tax_request.pdf
 
 ## JSON Output Format
 When you extract a PDF to JSON, the output includes:
-- **pages**: Array of page text content
 - **form_data**: Key-value pairs of user-entered form fields (if any)
 
 ```json
 {
-  "pages": [
-    {
-      "page_number": 1,
-      "text": "Extracted text from page..."
-    }
-  ],
-  "form_data": {
-    "FieldName": "User entered value",
-    ...
-  }
+  "taxpayer": {
+    "name": "John Doe",
+    "ssn": "123-45-6789",
+    "street_address": "123 Main St,",
+    "city": "Detroit",
+    "state": "MI",
+    "zip_code": "48201",
+    "previous_address": null
+  },
+  "spouse": {
+    "name": null,
+    "ssn": null
+  },
+  "transcript_request": {
+    "type": "RETURN_TRANSCRIPT", 
+    "form_number": "1040",
+    "tax_year": "2025,2024,2023,2022"
+  },
+  "signature_date": "2026-04-30",
+  "consent": true
 }
 ```
   Filename: tax_transcript_20260430_143022_tax_request.pdf
