@@ -1,0 +1,22 @@
+{
+  "taxpayer": {
+    "name": "John Doe",
+    "ssn": "123-45-6789",
+    "street_address": "123 Main St,",
+    "city": "Detroit",
+    "state": "MI",
+    "zip_code": "48201",
+    "previous_address": null
+  },
+  "spouse": {
+    "name": null,
+    "ssn": null
+  },
+  "transcript_request": {
+    "type": "RETURN_TRANSCRIPT", 
+    "form_number": "1040",
+    "tax_year": "2025,2024,2023,2022"
+  },
+  "signature_date": "2026-04-30",
+  "consent": true
+}
