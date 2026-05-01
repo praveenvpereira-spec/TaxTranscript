@@ -229,6 +229,11 @@ The `perform_eval()` function calculates accuracy scores for each field:
 
 **Final Score**: Average of all field scores (ranges from 0.0 to 1.0)
 
+
+## Observability Plan
+- Add logging to the Application. Log the prompt requests, any errors and events like any GPT-4 PDF calls.
+- Python's logging module with JSON formatting would be one good way for adding logging
+
 ## Dependencies
 The application automatically installs these dependencies on first run:
 - **flask** — Web framework for UI
