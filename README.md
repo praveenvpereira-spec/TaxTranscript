@@ -38,15 +38,29 @@ TaxTranscript/
    ```
 3. Follow the Prompts.
 
-## Expample Prompts
-| Option | Description |
-|--------|-------------|
-| 1 | Upload a tax transcript request PDF |
-| 2 | List all uploaded files |
-| 3 | View an uploaded PDF file |
-| 4 | Extract PDF data to JSON |
-| 5 | List extracted JSON files |
-| 6 | Exit |
+## User Interface
+
+### Upload a tax transcript request PDF
+
+<img width="851" height="307" alt="image" src="https://github.com/user-attachments/assets/501f2aac-48a4-4259-a05c-a08bc4e6c4a8" />
+
+### Confirmation of uploaded file
+
+<img width="846" height="361" alt="image" src="https://github.com/user-attachments/assets/37f6ddd1-b133-42e1-a9c2-43bb2214ff55" />
+
+### View an uploaded PDF file
+
+<img width="845" height="428" alt="image" src="https://github.com/user-attachments/assets/b6c2cf5c-9856-49a6-92df-59d5c9ca2158" />
+
+### Extract PDF data to JSON
+
+<img width="856" height="259" alt="image" src="https://github.com/user-attachments/assets/dc5048da-93e9-4a5c-967b-0468c97fa0b7" />
+
+
+### Structured output
+
+<img width="835" height="872" alt="image" src="https://github.com/user-attachments/assets/b00504d3-e515-48b7-a89f-c436833efa50" />
+
 
 ## Usage Example
 ```
